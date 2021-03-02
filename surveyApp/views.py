@@ -1,27 +1,37 @@
+import gspread
 from django.shortcuts import render
+from oauth2client.service_account import ServiceAccountCredentials
 
+scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+credentials = ServiceAccountCredentials.from_json_keyfile_name('util/clientSecret.json', scope)
+client = gspread.authorize(credentials)
+
+birey_Tanima_Formu_Alanlari = ["custom-stacked-radio-yas", "custom-stacked-radio-cinsiyet",
+                               "custom-stacked-radio-medeni",
+                               "custom-stacked-radio-egitim", "meslek", "custom-stacked-radio-meslek-gelir",
+                               "custom-stacked-radio-uyusturucu",
+                               "uyusturucu-ismi-miktari", "custom-stacked-radio-psikiyatrist", "psikiyatrist-sure",
+                               "custom-stacked-radio-hiper",
+                               "custom-stacked-radio-hiper-ilac", "custom-stacked-radio-egitim-a",
+                               "custom-stacked-radio-egitim-b", "custom-stacked-radio-alkol",
+                               "custom-stacked-radio-tutum"]
 
 # Create your views here.
 
 def bireyTanimaFormu(request):
     if request.method == 'POST':
         try:
-            yas = request.POST.get("custom-stacked-radio-yas")
-            cinsiyet = request.POST.get("custom-stacked-radio-cinsiyet")
-            medeni_durum = request.POST.get("custom-stacked-radio-medeni")
-            egitim = request.POST.get("custom-stacked-radio-egitim")
-            meslek = request.POST.get("meslek")
-            gelir = request.POST.get("custom-stacked-radio-meslek-gelir")
-            uyusturucu_kullanimi = request.POST.get("custom-stacked-radio-uyusturucu")
-            uyusturucu_ismi_miktari = request.POST.get("uyusturucu-ismi-miktari")
-            psikiyatrist_durumu = request.POST.get("custom-stacked-radio-psikiyatrist")
-            psikiyatrist_sure = request.POST.get("psikiyatrist-sure")
-            hiperaktivite_durumu = request.POST.get("custom-stacked-radio-hiper")
-            hiperaktivite_ilac_durumu = request.POST.get("custom-stacked-radio-hiper-ilac")
-            anne_egitim = request.POST.get("custom-stacked-radio-egitim-a")
-            baba_egitim = request.POST.get("custom-stacked-radio-egitim-b")
-            alkol = request.POST.get("custom-stacked-radio-alkol")
-            aile_tutumu = request.POST.get("custom-stacked-radio-tutum")
+            formData = []
+
+            sheet = client.open("BireyselTanıFormuCevaplar").sheet1
+            for field_name in birey_Tanima_Formu_Alanlari:
+                value = request.POST.get(field_name)
+                if value == "" or value == None:
+                    formData.append(" ")
+                else:
+                    formData.append(value)
+
+            sheet.append_row(formData, value_input_option='RAW')
             print(request.POST)
 
             # aşağıdaki gibi bussiness logic'ler eklenebilir
