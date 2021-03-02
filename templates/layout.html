@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+{% load static i18n %}
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA_Compatible" content="ie = edge">
+        <title> {% block title %}{% trans "Home Page" %}{% endblock title %} </title>
+        <link rel="stylesheet" href="{% static 'utilities/toast/toast.min.css' %}">
+
+        {% block style %} {% endblock style %}
+
+        <script src="/static/js/jquery-3.4.1.min.js">
+        </script>
+        <script src="/static/js/jquery-ui.min.js">
+        </script>
+
+        <link rel="shortcut icon" type="image/png" href="/static/images/survey_logo2.png">
+
+        <!-- Global stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+        <link href="{% static 'utilities/global_assets/css/icons/icomoon/styles.min.css' %}" rel="stylesheet" type="text/css">
+        <link id="bs_min_css"  href="{% static 'utilities/light/css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+        <link id="bsl_min_css" href="{% static 'utilities/light/css/bootstrap_limitless.css' %}" rel="stylesheet" type="text/css">
+        <link id="lay_min_css" href="{% static 'utilities/light/css/layout.css' %}" rel="stylesheet" type="text/css">
+        <link id="comp_min_css" href="{% static 'utilities/light/css/components.css' %}" rel="stylesheet" type="text/css">
+        <link id="color_min_css" href="{% static 'utilities/light/css/colors.css' %}" rel="stylesheet" type="text/css">
+
+        <!-- Core JS files -->
+        <script src="{% static 'utilities/global_assets/js/main/jquery.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/main/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/plugins/loaders/blockui.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/plugins/forms/styling/uniform.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/plugins/forms/styling/switch.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_pages/form_checkboxes_radios.js' %}"></script>
+
+        <!-- /core JS files -->
+
+        <!-- Theme JS files -->
+        <script src="{% static 'utilities/global_assets/js/plugins/visualization/d3/d3.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/plugins/visualization/d3/d3_tooltip.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/plugins/ui/moment/moment.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/plugins/pickers/daterangepicker.js' %}"></script>
+        <script src="{% static 'utilities/light/js/app.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_pages/dashboard.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/streamgraph.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/sparklines.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/lines.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/areas.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/donuts.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/bars.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/progress.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/heatmaps.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/pies.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_charts/pages/dashboard/light/bullets.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/plugins/notifications/sweet_alert.min.js' %}"></script>
+        <script src="{% static 'utilities/global_assets/js/demo_pages/extra_sweetalert.js' %}"></script>
+        {% comment %} <script src="{% static 'js/utilities/alerts.js' %}"></script> {% endcomment %}
+        <!-- /theme JS files -->
+    </head>
+    <body>
+        <!-- Main navbar -->
+        <div class="navbar navbar-expand-md navbar-dark navbar-static">
+            <a href="/" class="d-flex justify-content-center align-items-center text-white"> 
+                <img id="logo-navbar"style="height: 1.5rem;" src="{% static 'images/survey_logo_light.png' %}">
+                <h4 id="logo-text-navbar" style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; " class="ml-2 mr-2 mb-0">SurveyApp</h4>
+            </a>
+
+            <div class="d-md-none">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+                    <i class="icon-tree5"></i>
+                </button>
+                <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+                    <i class="icon-paragraph-justify3"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-mobile">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+                            <i class="icon-paragraph-justify3"></i>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+        <!-- /main navbar -->
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+                <!-- Sidebar mobile toggler -->
+                <div class="sidebar-mobile-toggler text-center">
+                    <a href="#" class="sidebar-mobile-main-toggle">
+                        <i class="icon-arrow-left8"></i>
+                    </a>
+                    {% trans 'Navigation' %}
+                    <a href="#" class="sidebar-mobile-expand">
+                        <i class="icon-screen-full"></i>
+                        <i class="icon-screen-normal"></i>
+                    </a>
+                </div>
+                <!-- /sidebar mobile toggler -->
+
+
+                <!-- Sidebar content -->
+                <div class="sidebar-content">
+
+
+                    <!-- Main navigation -->
+                    
+                    <div class="card card-sidebar-mobile">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                            <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Anketler</div> <i class="icon-menu" title="Data visualization"></i></li>
+
+                            <li class="nav-item">
+                                <a href="/" class="nav-link "> 
+                                    <i class="icon-pencil7"></i>
+                                    <span>
+                                        {% trans 'Birey Tanıma Formu' %}
+                                    </span>
+                                </a> 
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link "> 
+                                    <i class="icon-magazine"></i>
+                                    <span>
+                                        {% trans 'ASRS' %}
+                                    </span>
+                                </a> 
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link "> 
+                                    <i class="icon-newspaper"></i>
+                                    <span>
+                                        {% trans 'Diğer' %}
+                                    </span>
+                                </a> 
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link "> 
+                                    <i class="icon-file-text"></i>
+                                    <span>
+                                        {% trans 'Diğer 2' %}
+                                    </span>
+                                </a> 
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <!-- /main navigation -->
+
+                </div>
+                <!-- /sidebar content -->
+
+            </div>
+            <!-- /main sidebar -->
+
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Content area -->
+                <div class="content pt-3">
+
+                    <div class="row" style="height:100%">
+                        <!-- Mesajlar burada gosterilir -->
+                        {% if messages %} {% for message in messages %}
+                        <div id="messageDiv" {% if message.tags %} class="alert alert-{{ message.tags }} " {% endif %}>
+                            {{ message }}</div>
+                        {% endfor %} {% endif %}
+
+                        <!-- BLOCK BODY -->
+                        {% block body %} {% endblock body %}
+                        <!-- /BLOCK BODY -->
+                    </div>
+
+
+                </div>
+                <!-- /content area -->
+
+
+                <!-- Footer -->
+                <div class="navbar navbar-expand-lg navbar-dark">
+                    <div class="text-center d-lg-none w-100">
+                        <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+                            data-target="#navbar-footer">
+                            <i class="icon-unfold mr-2"></i>
+                            {% trans 'Footer' %}
+                        </button>
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="navbar-footer">
+                        <span class="navbar-text">
+                            &copy; SurveyApp - 2021
+                        </span>
+
+                    </div>
+                </div>
+                <!-- /footer -->
+
+            </div>
+            <!-- /main content -->
+
+        </div>
+        <!-- /page content -->
+
+        <script type="text/javascript" src="{% static 'utilities/toast/toast.min.js' %}"></script>
+
+        <!-- BLOCK JAVASCRIPT -->
+        {% block javascript %} {% endblock javascript %}
+    </body>
+</html>

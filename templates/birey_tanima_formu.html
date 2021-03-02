@@ -1,0 +1,350 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+
+
+{% block title %}
+{% trans 'Birey tanima Formu' %}
+{% endblock title %}
+
+{% block body %}
+<div class="card" style="width:100%">
+    <div class="card-header header-elements-inline">
+        <h5 class="card-title">{% trans 'Birey Tanıma Formu' %}</h5>
+    </div>
+    <div class="card-body">
+        <form id="bireyTanimaForm" class="" method="post">
+        {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-6">
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Yaşınız?' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-yas" id="yas_1" checked value="16-20 yaş">
+                                        <label class="custom-control-label" for="yas_1">{% trans '16-20 yaş' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-yas" id="yas_2" value="21-30 yaş">
+                                        <label class="custom-control-label" for="yas_2">{% trans '21-30 yaş' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-yas" id="yas_3" value="31-40 yaş">
+                                        <label class="custom-control-label" for="yas_3">{% trans '31-40 yaş' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-yas" id="yas_4" value="41 yaş ve üstü">
+                                        <label class="custom-control-label" for="yas_4">{% trans '41 yaş ve üstü' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Cinsiyet' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-cinsiyet" id="cinsiyet_1" checked value="Kadın">
+                                        <label class="custom-control-label" for="cinsiyet_1">{% trans 'Kadın' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-cinsiyet" id="cinsiyet_2" value="Erkek">
+                                        <label class="custom-control-label" for="cinsiyet_2">{% trans 'Erkek' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Medeni Durum' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-medeni" id="medeni_1" checked value="Bekar">
+                                        <label class="custom-control-label" for="medeni_1">{% trans 'Bekar' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-medeni" id="medeni_2" value="Evli">
+                                        <label class="custom-control-label" for="medeni_2">{% trans 'Evli' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-medeni" id="medeni_3" value="Boşanmış">
+                                        <label class="custom-control-label" for="medeni_3">{% trans 'Boşanmış' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-medeni" id="medeni_4" value="Dul">
+                                        <label class="custom-control-label" for="medeni_4">{% trans 'Dul' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Eğitim Düzeyi' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim" id="ilkokul" checked value="İlkokul">
+                                        <label class="custom-control-label" for="ilkokul">{% trans 'İlkokul' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim" id="ortaokul" value="Ortaokul">
+                                        <label class="custom-control-label" for="ortaokul">{% trans 'Ortaokul' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim" id="lise" value="Lise">
+                                        <label class="custom-control-label" for="lise">{% trans 'Lise' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim" id="universite" value="Üniversite">
+                                        <label class="custom-control-label" for="universite">{% trans 'Üniversite' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Meslek' %}</label>
+                                    <input type="text" class="form-control" placeholder="Marangoz, Aşçı ..." name="meslek">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Aylık toplam geliriniz?' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-meslek-gelir" id="gelir_1" checked value="500 TL'den az">
+                                        <label class="custom-control-label" for="gelir_1">{% trans '500 TL\'den az' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-meslek-gelir" id="gelir_2" value="500 -1000 TL arası">
+                                        <label class="custom-control-label" for="gelir_2">{% trans '500 - 1000 TL arası' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-meslek-gelir" id="gelir_3" value="100 TL'den çok">
+                                        <label class="custom-control-label" for="gelir_3">{% trans '1000 TL\' den çok' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Uyuşturucu madde kullanımı' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-uyusturucu" id="uyusturucu_1" value="Var">
+                                        <label class="custom-control-label" for="uyusturucu_1">{% trans 'Var' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-uyusturucu" id="uyusturucu_2" checked value="Yok">
+                                        <label class="custom-control-label" for="uyusturucu_2">{% trans 'Yok' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Uyuşturucu madde ismi ve miktarı' %}</label>
+                                    <input type="text" class="form-control" placeholder="Kokain, eroin ..." name="uyusturucu-ismi-miktari" id="uyusturucu-ismi-miktari" disabled>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Çocukluk döneminde psikolojik danışman veya psikiyatriste başvurunuz oldu mu?	' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-psikiyatrist" id="psikiyatrist_1" value="Evet">
+                                        <label class="custom-control-label" for="psikiyatrist_1">{% trans 'Evet' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-psikiyatrist" id="psikiyatrist_2" checked value="Hayır">
+                                        <label class="custom-control-label" for="psikiyatrist_2">{% trans 'Hayır' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Çocukluk döneminde psikolojik danışman veya psikiyatriste gitme süreniz nedir?' %}</label>
+                                    <input type="text" class="form-control" placeholder="2 ay, 1 sene ..." name="psikiyatrist-sure" id="psikiyatrist-sure" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Çocukluk döneminde hiperaktivite  tanısı konuldu mu?' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-hiper" id="hiperaktivite_1" checked value="Evet">
+                                        <label class="custom-control-label" for="hiperaktivite_1">{% trans 'Evet' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-hiper" id="hiperaktivite_2" value="Hayır">
+                                        <label class="custom-control-label" for="hiperaktivite_2">{% trans 'Hayır' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Hiperaktivite tanısı konulduysa ilaç tedavisi gördünüz mü?' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-hiper-ilac" id="hiper_ilac_1" checked value="Evet">
+                                        <label class="custom-control-label" for="hiper_ilac_1">{% trans 'Evet' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-hiper-ilac" id="hiper_ilac_2" value="Hayır">
+                                        <label class="custom-control-label" for="hiper_ilac_2">{% trans 'Hayır' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Annenizin eğitim durumu' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-a" id="ilkokul_a" checked value="İlkokul">
+                                        <label class="custom-control-label" for="ilkokul_a">{% trans 'İlkokul' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-a" id="ortaokul_a" value="Ortaokul">
+                                        <label class="custom-control-label" for="ortaokul_a">{% trans 'Ortaokul' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-a" id="lise_a" value="Lise">
+                                        <label class="custom-control-label" for="lise_a">{% trans 'Lise' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-a" id="universite_a" value="Üniversite">
+                                        <label class="custom-control-label" for="universite_a">{% trans 'Üniversite' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Babanızın eğitim durumu' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-b" id="ilkokul_b" checked value="İlkokul">
+                                        <label class="custom-control-label" for="ilkokul_b">{% trans 'İlkokul' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-b" id="ortaokul_b" value="Ortaokul">
+                                        <label class="custom-control-label" for="ortaokul_b">{% trans 'Ortaokul' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-b" id="lise_b" value="Lise">
+                                        <label class="custom-control-label" for="lise_b">{% trans 'Lise' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-egitim-b" id="universite_b" value="Üniversite">
+                                        <label class="custom-control-label" for="universite_b">{% trans 'Üniversite' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Alkol kullanımı' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-alkol" id="alkol_1" checked value="Alkol kullanmıyorum.">
+                                        <label class="custom-control-label" for="alkol_1">{% trans 'Alkol kullanmıyorum.' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-alkol" id="alkol_2" value="Sosyal ortamlarada biraz kullanıyorum">
+                                        <label class="custom-control-label" for="alkol_2">{% trans 'Sosyal ortamlarada biraz kullanıyorum' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-alkol" id="alkol_3" value="Canım istedikçe biraz kullanıyorum">
+                                        <label class="custom-control-label" for="alkol_3">{% trans 'Canım istedikçe biraz kullanıyorum' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-alkol" id="alkol_4" value="Düzenli olarak her akşam alkol kullanıyorum">
+                                        <label class="custom-control-label" for="alkol_4">{% trans 'Düzenli olarak her akşam alkol kullanıyorum' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-alkol" id="alkol_5" value="Alkol kullanma düzeyimin çok yüksek olduğunu düşünüyorum.">
+                                        <label class="custom-control-label" for="alkol_5">{% trans 'Alkol kullanma düzeyimin çok yüksek olduğunu düşünüyorum.' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group pt-2">
+                                    <label class="d-block font-weight-semibold">{% trans 'Ailenizin (anne-baba) ana-babalık tutumu' %}</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-tutum" id="tutum_1" checked value="Demokratik">
+                                        <label class="custom-control-label" for="tutum_1">{% trans 'Demokratik' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-tutum" id="tutum_2" value="Otokratik-baskıcı">
+                                        <label class="custom-control-label" for="tutum_2">{% trans 'Otokratik-baskıcı' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-tutum" id="tutum_3" value="Aşırı koruyucu">
+                                        <label class="custom-control-label" for="tutum_3">{% trans 'Aşırı koruyucu' %}</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" name="custom-stacked-radio-tutum" id="tutum_4" value="İlgisiz anne baba">
+                                        <label class="custom-control-label" for="tutum_4">{% trans 'İlgisiz anne baba' %}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock body %}
+
+{% block javascript %} 
+<script src="{% static 'js/birey_tanima.js' %}"></script>
+{% endblock javascript %}

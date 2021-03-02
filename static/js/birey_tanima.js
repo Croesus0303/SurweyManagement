@@ -1,0 +1,19 @@
+$(function(){
+    $("input[name='custom-stacked-radio-uyusturucu'").click(function(){
+        if($('#uyusturucu_1').is(':checked')){
+            $("#uyusturucu-ismi-miktari").removeAttr("disabled");
+            $("#uyusturucu-ismi-miktari").focus()
+        }else{
+            $("#uyusturucu-ismi-miktari").attr("disabled","disabled")
+        }
+    })
+
+    $("input[name='custom-stacked-radio-psikiyatrist'").click(function(){
+        if($('#psikiyatrist_1').is(':checked')){
+            $("#psikiyatrist-sure").removeAttr("disabled");
+            $("#psikiyatrist-sure").focus()
+        }else{
+            $("#psikiyatrist-sure").attr("disabled","disabled")
+        }
+    })
+})
