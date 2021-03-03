@@ -1,10 +1,15 @@
 import gspread
 from django.shortcuts import render
 from oauth2client.service_account import ServiceAccountCredentials
+import json
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('util/clientSecret.json', scope)
 client = gspread.authorize(credentials)
+
+
+
+
 
 birey_Tanima_Formu_Alanlari = ["custom-stacked-radio-yas", "custom-stacked-radio-cinsiyet",
                                "custom-stacked-radio-medeni",
@@ -22,6 +27,27 @@ def bireyTanimaFormu(request):
     if request.method == 'POST':
         try:
             formData = []
+            # x = {
+            #     "yas": request.POST.get("custom-stacked-radio-yas"),
+            #     "cinsiyet": request.POST.get("custom-stacked-radio-cinsiyet"),
+            #     "medeni": request.POST.get("custom-stacked-radio-medeni"),
+            #     "egitim": request.POST.get("custom-stacked-radio-egitim"),
+            #     "meslek": request.POST.get("meslek"),
+            #     "gelir": request.POST.get("custom-stacked-radio-meslek-gelir"),
+            #     "uyusturucu": request.POST.get("custom-stacked-radio-uyusturucu"),
+            #     "ismi-miktari": request.POST.get("uyusturucu-ismi-miktari"),
+            #     "psikiyatrist": request.POST.get("custom-stacked-radio-psikiyatrist"),
+            #     "psikiyatrist-sure": request.POST.get("psikiyatrist-sure"),
+            #     "hiper": request.POST.get("custom-stacked-radio-hiper"),
+            #     "hiper-ilac": request.POST.get("custom-stacked-radio-hiper-ilac"),
+            #     "egitim-a": request.POST.get("custom-stacked-radio-egitim-a"),
+            #     "egitim-b": request.POST.get("custom-stacked-radio-egitim-b"),
+            #     "alkol": request.POST.get("custom-stacked-radio-alkol"),
+            #     "tutum": request.POST.get("custom-stacked-radio-tutum")
+            #
+            # }
+            # y = json.dumps(x)
+
 
             sheet = client.open("BireyselTanıFormuCevaplar").sheet1
             for field_name in birey_Tanima_Formu_Alanlari:
@@ -33,6 +59,12 @@ def bireyTanimaFormu(request):
 
             sheet.append_row(formData, value_input_option='RAW')
             print(request.POST)
+
+            # for key in y:
+            #     formData.append([key, y[key]])
+            #
+            # sheet.update('A1', formData)
+
 
             # aşağıdaki gibi bussiness logic'ler eklenebilir
             # if len(name) <= 0:
