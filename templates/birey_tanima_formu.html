@@ -844,7 +844,307 @@
 
                 <h3 class="form-group-feedback-right">YETİŞKİN DİKKAT EKSİKLİĞİ HİPERAKTİVİTE DSM-IV KRİTERLERİ</h3>
                 <div class="col-lg-12">
-                    <h1>Bu kısımdkai sorular buraya gelicek</h1>
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Dikkatsizlik belirtilerinden en az 6 tanesi ya da Hiperaktivite-impulsivite belirtilerinden en az 6 vardır' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-DSM" id="DSM-optional_1" checked value="0">
+                            <label class="custom-control-label" for="DSM-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-DSM" id="DSM-optional_2" value="1">
+                            <label class="custom-control-label" for="DSM-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <h4 class="form-group-feedback">Dikkatsizlik</h4>
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Dikkatini ayrıntılara veremez ya da işlerinde ya da diğer etkinliklerinde dikkatsizce hatalar yapar' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik1" id="Dikkatsizlik1-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik1-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik1" id="Dikkatsizlik1-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik1-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Üzerine aldığı görevlerde ya da oynadığı etkinliklerde dikkati dağılır.' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik2" id="Dikkatsizlik2-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik2-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik2" id="Dikkatsizlik2-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik2-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Doğrudan kendisiyle konuşulduğunda çoğu zaman dinlemiyormuş gibi görünür.' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik3" id="Dikkatsizlik3-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik3-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik3" id="Dikkatsizlik3-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik3-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Yönergeleri izlemez, ufak tefek işleri ya da iş yerindeki görevleri tammlayamaz.' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik4" id="Dikkatsizlik4-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik4-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik4" id="Dikkatsizlik4-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik4-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Üzerine aldığı görev ve etkinlikleri düzenlemekte zorluk çeker' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik5" id="Dikkatsizlik5-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik5-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik5" id="Dikkatsizlik5-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik5-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Sürekli zihinsel çaba gerektiren görevlerden kaçınır, bunları sevmez ya da bunlarda yer almaya karşı isteksizdir.' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik6" id="Dikkatsizlik6-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik6-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik6" id="Dikkatsizlik6-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik6-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Üzerine aldığı görevler ya da etkinlikler için gerekli eşyaları kaybeder' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik7" id="Dikkatsizlik7-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik7-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik7" id="Dikkatsizlik7-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik7-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans ') Dikkati dış uyaranlarla kolayca dağılır' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik8" id="Dikkatsizlik8-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik8-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik8" id="Dikkatsizlik8-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik8-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-2">
+                        <label class="d-block font-weight-semibold">{% trans 'Günlük etkinliklerde unutkandır.' %}</label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik9" id="Dikkatsizlik9-optional_1" checked value="0">
+                            <label class="custom-control-label" for="Dikkatsizlik9-optional_1">{% trans 'Hayır' %}</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="custom-stacked-radio-Dikkatsizlik9" id="Dikkatsizlik9-optional_2" value="1">
+                            <label class="custom-control-label" for="Dikkatsizlik9-optional_2">{% trans 'Evet' %}</label>
+                        </div>
+                    </div>
+                    <h4 class="form-group-feedback">HiperAktivite</h4>
+                    <div class="form-group pt-2">
+						<label class="d-block font-weight-semibold">{% trans 'Elleri, ayakları kıpır kıpırdır ya da oturduğu yerde kıpırdanıp durur' %}</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite1" id="Hiperaktivite1-optional_1" checked value="0">
+							<label class="custom-control-label" for="Hiperaktivite1-optional_1">{% trans 'Hayır' %}</label>
+						</div>
+
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite1" id="Hiperaktivite1-optional_2" value="1">
+							<label class="custom-control-label" for="Hiperaktivite1-optional_2">{% trans 'Evet' %}</label>
+						</div>
+					</div>
+
+					<div class="form-group pt-2">
+						<label class="d-block font-weight-semibold">{% trans 'Oturması beklenen diğer durumlarda oturduğu yerden kalkar	' %}</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite2" id="Hiperaktivite2-optional_1" checked value="0">
+							<label class="custom-control-label" for="Hiperaktivite2-optional_1">{% trans 'Hayır' %}</label>
+						</div>
+
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite2" id="Hiperaktivite2-optional_2" value="1">
+							<label class="custom-control-label" for="Hiperaktivite2-optional_2">{% trans 'Evet' %}</label>
+						</div>
+					</div>
+
+					<div class="form-group pt-2">
+						<label class="d-block font-weight-semibold">{% trans ') Uygunsuz olan durumlarda koşuşturup durur ' %}</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite3" id="Hiperaktivite3-optional_1" checked value="0">
+							<label class="custom-control-label" for="Hiperaktivite3-optional_1">{% trans 'Hayır' %}</label>
+						</div>
+
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite3" id="Hiperaktivite3-optional_2" value="1">
+							<label class="custom-control-label" for="Hiperaktivite3-optional_2">{% trans 'Evet' %}</label>
+						</div>
+					</div>
+
+					<div class="form-group pt-2">
+						<label class="d-block font-weight-semibold">{% trans 'Sakin bir biçimde boş zamanları geçirme etkinliklerine katılma ya da oyun oynama zorluğu vardır.' %}</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite4" id="Hiperaktivite4-optional_1" checked value="0">
+							<label class="custom-control-label" for="Hiperaktivite4-optional_1">{% trans 'Hayır' %}</label>
+						</div>
+
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite4" id="Hiperaktivite4-optional_2" value="1">
+							<label class="custom-control-label" for="Hiperaktivite4-optional_2">{% trans 'Evet' %}</label>
+						</div>
+					</div>
+
+					<div class="form-group pt-2">
+						<label class="d-block font-weight-semibold">{% trans 'Hareket halindedir ya da bir ömotor tarafından sürülüyormuş gibi davranır' %}</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite5" id="Hiperaktivite5-optional_1" checked value="0">
+							<label class="custom-control-label" for="Hiperaktivite5-optional_1">{% trans 'Hayır' %}</label>
+						</div>
+
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite5" id="Hiperaktivite5-optional_2" value="1">
+							<label class="custom-control-label" for="Hiperaktivite5-optional_2">{% trans 'Evet' %}</label>
+						</div>
+					</div>
+
+					<div class="form-group pt-2">
+						<label class="d-block font-weight-semibold">{% trans 'Çok konuşur' %}</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite6" id="Hiperaktivite6-optional_1" checked value="0">
+							<label class="custom-control-label" for="Hiperaktivite6-optional_1">{% trans 'Hayır' %}</label>
+						</div>
+
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" class="custom-control-input" name="custom-stacked-radio-Hiperaktivite6" id="Hiperaktivite6-optional_2" value="1">
+							<label class="custom-control-label" for="Hiperaktivite6-optional_2">{% trans 'Evet' %}</label>
+						</div>
+					</div>
+
+                    <h4 class="form-group-feedback">İmpulsivite </h4>
+
+                <div class="form-group pt-2">
+					<label class="d-block font-weight-semibold">{% trans 'Sorulan soru tamamlanmadan önce cevabını yapıştırır' %}</label>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite1" id="impulsivite1-optional_1" checked value="0">
+						<label class="custom-control-label" for="impulsivite1-optional_1">{% trans 'Hayır' %}</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite1" id="impulsivite1-optional_2" value="1">
+						<label class="custom-control-label" for="impulsivite1-optional_2">{% trans 'Evet' %}</label>
+					</div>
+				</div>
+
+				<div class="form-group pt-2">
+					<label class="d-block font-weight-semibold">{% trans 'Sırasını beklemekte güçlük çeker	' %}</label>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite2" id="impulsivite2-optional_1" checked value="0">
+						<label class="custom-control-label" for="impulsivite2-optional_1">{% trans 'Hayır' %}</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite2" id="impulsivite2-optional_2" value="1">
+						<label class="custom-control-label" for="impulsivite2-optional_2">{% trans 'Evet' %}</label>
+					</div>
+				</div>
+
+				<div class="form-group pt-2">
+					<label class="d-block font-weight-semibold">{% trans 'başkalarının sözünü kese ya da yaptıklarının arasına girer' %}</label>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite3" id="impulsivite3-optional_1" checked value="0">
+						<label class="custom-control-label" for="impulsivite3-optional_1">{% trans 'Hayır' %}</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite3" id="impulsivite3-optional_2" value="1">
+						<label class="custom-control-label" for="impulsivite3-optional_2">{% trans 'Evet' %}</label>
+					</div>
+				</div>
+
+				<div class="form-group pt-2">
+					<label class="d-block font-weight-semibold">{% trans 'Bozulmaya yol açmış olan bazı belirtiler 7 yaşından önce de vardır.' %}</label>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite4" id="impulsivite4-optional_1" checked value="0">
+						<label class="custom-control-label" for="impulsivite4-optional_1">{% trans 'Hayır' %}</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite4" id="impulsivite4-optional_2" value="1">
+						<label class="custom-control-label" for="impulsivite4-optional_2">{% trans 'Evet' %}</label>
+					</div>
+				</div>
+
+				<div class="form-group pt-2">
+					<label class="d-block font-weight-semibold">{% trans '2 ya da daha fazla ortamda bu belirtilerden kaynaklanan bir bozulma vardır' %}</label>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite5" id="impulsivite5-optional_1" checked value="0">
+						<label class="custom-control-label" for="impulsivite5-optional_1">{% trans 'Hayır' %}</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite5" id="impulsivite5-optional_2" value="1">
+						<label class="custom-control-label" for="impulsivite5-optional_2">{% trans 'Evet' %}</label>
+					</div>
+				</div>
+
+				<div class="form-group pt-2">
+					<label class="d-block font-weight-semibold">{% trans 'Toplumsal ya da mesleki işlevsellikte belirgin bir bozulma olduğunun açık kanıtları vardır' %}</label>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite6" id="impulsivite6-optional_1" checked value="0">
+						<label class="custom-control-label" for="impulsivite6-optional_1">{% trans 'Hayır' %}</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite6" id="impulsivite6-optional_2" value="1">
+						<label class="custom-control-label" for="impulsivite6-optional_2">{% trans 'Evet' %}</label>
+					</div>
+				</div>
+
+				<div class="form-group pt-2">
+					<label class="d-block font-weight-semibold">{% trans ') Bu belirtiler sadece Şizofreni ya da başka bir psikotik bozukluk sırasında ortaya çıkmamaktadır ve başka bir psikiyatrik bozuklukla daha iyi açıklanamaz' %}</label>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite7" id="impulsivite7-optional_1" checked value="0">
+						<label class="custom-control-label" for="impulsivite7-optional_1">{% trans 'Hayır' %}</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" name="custom-stacked-radio-impulsivite7" id="impulsivite7-optional_2" value="1">
+						<label class="custom-control-label" for="impulsivite7-optional_2">{% trans 'Evet' %}</label>
+					</div>
+				</div>
                 </div>
 
                 <h3 class="form-group-feedback-right">1.BÖLÜM : Dikkat Eksikliği Bölümü (DEB)</h3>
