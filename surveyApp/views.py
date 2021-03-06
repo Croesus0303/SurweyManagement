@@ -1,15 +1,10 @@
 import gspread
 from django.shortcuts import render
 from oauth2client.service_account import ServiceAccountCredentials
-import json
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('util/clientSecret.json', scope)
 client = gspread.authorize(credentials)
-
-
-
-
 
 birey_Tanima_Formu_Alanlari = ["custom-stacked-radio-yas", "custom-stacked-radio-cinsiyet",
                                "custom-stacked-radio-medeni",
@@ -20,6 +15,7 @@ birey_Tanima_Formu_Alanlari = ["custom-stacked-radio-yas", "custom-stacked-radio
                                "custom-stacked-radio-hiper-ilac", "custom-stacked-radio-egitim-a",
                                "custom-stacked-radio-egitim-b", "custom-stacked-radio-alkol",
                                "custom-stacked-radio-tutum"]
+
 
 # Create your views here.
 
@@ -48,14 +44,11 @@ def bireyTanimaFormu(request):
             # }
             # y = json.dumps(x)
 
+            # first column crsf token removed
+            for val in list(dict(request.POST).values())[1:]:
+                formData.append(val[0])
 
-            sheet = client.open("BireyselTanıFormuCevaplar").sheet1
-            for field_name in birey_Tanima_Formu_Alanlari:
-                value = request.POST.get(field_name)
-                if value == "" or value == None:
-                    formData.append(" ")
-                else:
-                    formData.append(value)
+            sheet = client.open("Bireysel Tanı formu test").sheet1
 
             sheet.append_row(formData, value_input_option='RAW')
             print(request.POST)
@@ -64,7 +57,6 @@ def bireyTanimaFormu(request):
             #     formData.append([key, y[key]])
             #
             # sheet.update('A1', formData)
-
 
             # aşağıdaki gibi bussiness logic'ler eklenebilir
             # if len(name) <= 0:
