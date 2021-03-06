@@ -48,7 +48,7 @@ def bireyTanimaFormu(request):
             for val in list(dict(request.POST).values())[1:]:
                 formData.append(val[0])
 
-            sheet = client.open("Bireysel Tanı formu test").sheet1
+            sheet = client.open("BireyselTanıFormuCevaplar").sheet1
 
             sheet.append_row(formData, value_input_option='RAW')
             print(request.POST)
